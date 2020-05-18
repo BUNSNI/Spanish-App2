@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spanish App</title>
+        <link href="./css/index.css" type="text/css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <h1>Learn Spanish</h1>
+            <h3>Vocab Recall</h3>
+        </header>
+
+        <main>
+            <div>
+                <p>Que significa <a id="question"><em>-</em></a>?</p>
+            </div>
+            <div>
+                <p>Significa <a id="answer"><em>-</em></a></p>
+            </div>
+            <div id="container">
+                <button class="learn-more" id="button1" onclick="reveal()">Show Answer</button>
+                <button class="learn-more" id="button2" onclick="test()">Next Question</button>
+            </div>
+            
+        </main>
+        <script type="text/javascript" src="scripts/spanish.js"></script>
+    </body>
+
+</html>
