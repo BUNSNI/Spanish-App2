@@ -4,27 +4,65 @@
         <title>Spanish App</title>
         <link href="./css/index.css" type="text/css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Alata&family=Londrina+Solid&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <header>
-            <h1>Learn Spanish</h1>
-            <h3>Vocab Recall</h3>
+            <img src="images/spanish flag ball logo.png" class="App-logo" />
+            <h3>Spanish Vocab Recall</h3>
+            <h6>Intermediate - Advanced Level</h6>
+            <h5>500 most common words</h5>
         </header>
 
         <main>
-            <div>
-                <p>Que significa <a id="question"><em>-</em></a>?</p>
-            </div>
-            <div>
-                <p>Significa <a id="answer"><em>-</em></a></p>
-            </div>
-            <div id="container">
-                <button class="learn-more" id="button1" onclick="reveal()">Show Answer</button>
-                <button class="learn-more" id="button2" onclick="test()">Next Question</button>
-            </div>
+            <div class="flex-container">
+                <div class="left-box">
+                    <div class="button-switch">
+                        <a class="switch" id="toggleOrder" onclick="toggleOrder()">Random Order</a>
+                    </div>
+                    <p>Palabra: <a id="wordNumber"><em>0</em></a>/500</p>
+                </div>
+
+                <div class="centre-box">
+                    <div>
+                        <p class="paragraph">Que significa: <a id="question"><em>-</em></a>?</p>
+                    </div>
+                    <div>
+                        <p class="paragraph">Significa: <a id="answer"><em>-</em></a></p>
+                    </div>
+                </div>
+                
+                <div class="right-box">
+                    <button class="save-button" id="save-button" onclick="saveWord()">Save Word</button>
+                    <p>Saved Words: <a id="savedWordCount"><em>-</em></a> </p>
+                    <button class="saved-words"><a class="savedWords" href="#listWord">Go To Saved Words</a></button>
+                </div>
+        </div>
+        
+                <div id="container">
+                    <button class="learn-more" id="button2" onclick="test()">Next Question</button>
+                    <button class="learn-more" id="button1" onclick="reveal()">Show Answer</button>
+                </div>
             
-        </main>
+        </main>    
+            
+        <footer>
+            <div class=>
+                <a class="switch" onclick="toggle()">Push to Switch Languages Around</a>
+                <p id="toggle">English to Spanish</p>
+            </div>
+
+            <div class="flex-container">
+                <ol id="listWord">
+                    
+                </ol>
+            </div>
+
+        </footer>
+            
+            
+        
         <script type="text/javascript" src="scripts/spanish.js"></script>
     </body>
 

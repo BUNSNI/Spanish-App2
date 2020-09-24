@@ -3,14 +3,60 @@ body {
     font-family: 'Balsamiq Sans', cursive;
 }
 
-header {
-    text-align: center;
-    font-size: 2.5vw;
+.App-logo {
+  height: 20vmin;
+  pointer-events: none;
+  border-radius: 60%;
+
 }
 
-main {
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+header {
+    text-align: center;
+    font-size: 2.8vw;
+}
+
+h3 {
+  margin: 0;
+}
+
+h5, h6 {
+  color: grey;
+  margin: 0.2vw;
+}
+
+main, footer {
     text-align: center;
     font-size: 1.5vw;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-box, .right-box {
+  font-size: 2vw;
+  margin: 2vw;
+}
+
+#container {
+  font-size: 2.5vw;
 }
 
 button {
@@ -21,18 +67,124 @@ button {
     font-size: inherit;
     font-family: inherit;
   }
+
+  button.save-button {
+    display: inline-block;
+    padding: 0.4em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.20em;
+    box-sizing: border-box;
+    font-family: 'Balsamiq Sans', cursive;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #FFFFFF;
+    background-color: #3369ff;
+    box-shadow: inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+    text-align: center;
+    position: relative;
+  }
+
+  button.save-button:hover {
+    background-color: white;
+    color: blue;
+  }
+
+  button.saved-words {
+      display: inline-block;
+      padding: 0.4em 1.2em;
+      margin: 0 0.3em 0.3em 0;
+      border-radius: 0.20em;
+      box-sizing: border-box;
+      font-family: 'Balsamiq Sans', cursive;
+      text-transform: uppercase;
+      font-weight: 100;
+      background-color: #3369ff;
+      box-shadow: inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+      text-align: center;
+      position: relative;
+    }
+
+  a.savedWords:link {
+    color: white;
+    text-decoration: none;
+  }
+
+  button.saved-words:hover {
+    background-color: white;
+    color: blue;
+  }
+
+  a.savedWords:visited {
+    color: rgb(175, 174, 174);
+  }
+
+
+
+
+
   button.learn-more {
     -webkit-transition: all 0.5s cubic-bezier(0.65, -0.25, 0.25, 1.95);
     transition: all 0.5s cubic-bezier(0.65, -0.25, 0.25, 1.95);
     font-weight: 500;
-    color: #202121;
+    color: #016969;
     padding: 1.25rem 2rem;
     background: #fff;
     text-transform: uppercase;
   }
+
   button.learn-more:hover, button.learn-more:focus, button.learn-more:active {
     letter-spacing: 0.125rem;
   }
   
+  #toggle {
+    background-color: rgb(253, 221, 37);
+    margin: 0;
+    font-size: 3vw;
+    font-family: 'Alata', sans-serif;
+  }
+
+
+.paragraph {
+  font-size: 4vw;
+}
+
+#question, #answer {
+  color: rgb(216, 50, 78);
+}
  
-  
+.button-switch {
+  margin-top: 1.25rem;
+}
+
+a.switch{
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border:0.1em solid #020202;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  font-family: 'Alata', sans-serif;
+  font-weight: 300;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
+  margin: 2vw;
+  }
+
+  a.switch:hover{
+  color:#fdfdfd;
+  background-color:#020202;
+  }
+
+  @media all and (max-width:30em){
+   a.switch{
+  display:block;
+  margin:0.4em auto;
+  }
+}
+
+#listWord {
+  align-items: baseline;
+}
