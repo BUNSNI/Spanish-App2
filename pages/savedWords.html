@@ -9,12 +9,46 @@
 
         <body>
             <header>
-                <a href="../index.html"><img src="../images/spanish flag ball logo.png" class="App-logo" /></a>
+                <a href="../index.html"><img src="../images/spanish flag ball logo.png" class="App-logo"/></a>
                 <h3>Spanish Vocab Saved</h3>
             </header>
 
             <main>
-                <p></p>
+                <script>
+                
+
+                    window.onload = function(){
+                        var retrieved = localStorage.getItem('savedWords');
+                        var newObject = retrieved.split(',');
+                    
+
+                        console.log(newObject)
+                        
+
+                        document.getElementById('listWord').innerHTML = "<li>" + newObject.join("<li></li>") + "</li>";
+
+                        if (sessionStorage.length > 0){
+                            var retrievedOld = sessionStorage.getItem('oldStorage');
+                            var oldObject = retrievedOld.split(',');
+                            document.getElementById('sessionStorage').innerHTML = "<li>" + oldObject.join("<li></li>") + "</li>";
+                        }
+                        
+                        
+                        
+                        sessionStorage.setItem('oldStorage', newObject);
+                }
+
+                </script>
+                <p>Your Newly Saved Words</p>
+                <ol id='listWord'>
+
+                </ol>
+                <p>Your Previously Saved Words</p>
+                <ol id='sessionStorage'>
+
+                </ol>
+
+                <button onclick="clearAll()">Clear All</button>
             </main>
 
             <script type="text/javascript" src="../scripts/spanish.js"></script>

@@ -8,11 +8,26 @@
     </head>
 
     <body>
-        <header>
-            <img src="images/spanish flag ball logo.png" class="App-logo" />
-            <h3>Spanish Vocab Recall</h3>
-            <h6>Intermediate - Advanced Level</h6>
-            <h5>500 most common words</h5>
+        <header class='site-header'>
+            <nav class='navbar navbar-expand-md navbar-dark bg-steel fixed-top'>
+                <div class='container'>
+                    <img src="/spanishApp2/images/spanish flag ball logo.png" class="App-logo" />
+                    <a class='navbar-brand mr-4' href="/">Vocab Recall</a>
+                    <button class='navbar-toggler' type='button' data-toggle='collapse'>
+                        <span class='navbar-toggler-icon'></span>
+                    </button>
+                    <div class='collapse navbar-collapse' id='navbarToggle'>
+                        <div class='navbar-nav mr-auto'>
+                            <a class='nav-item nav-link' href="{% url 'vocab-home' %}">Home</a>
+                            <a class='nav-item nav-link' href="../spanishApp2/pages/savedWords.html">Go To Saved Words</a>
+                        </div>
+                        <div class='navbar-nav'>
+                            <a class='nav-item nav-link' href='#'>Login</a>
+                            <a class='nav-item nav-link' href='#'>Register</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </header>
 
         <main>
@@ -36,7 +51,7 @@
                 <div class="right-box">
                     <button class="save-button" id="save-button" onclick="saveWord()">Save Word</button>
                     <p>Saved Words: <a id="savedWordCount"><em>-</em></a> </p>
-                    <button class="saved-words"><a class="savedWords" href="#listWord">Go To Saved Words</a></button>
+                    <button class="saved-words"><a class="savedWords" href="../spanishApp2/pages/savedWords.html">Go To Saved Words</a></button>
                 </div>
         </div>
         

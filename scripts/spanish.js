@@ -179,7 +179,8 @@ const questions = {
     let standbyWord = [];
     let savedWords = [];
     let line = ' - ';
-    let space = ' '
+    let space = ' ';
+    let wordStorage = [];
 
 
     function test() {
@@ -222,10 +223,20 @@ const questions = {
         x.innerHTML = "Random Order";
       };
     };
+
     
     function saveWord(){
       savedWords.push(standbyWord[standbyWord.length - 1]);
       document.getElementById('savedWordCount').innerHTML = savedWords.length;
-      document.getElementById('listWord').innerHTML = "<li>" + savedWords.join("</li><li>") + "</li>";;
+      document.getElementById('listWord').innerHTML = "<li>" + savedWords.join("</li><li>") + "</li>";
+      
+      localStorage.setItem('savedWords', savedWords)
+  
+      
     }
   
+  
+    function clearAll(){
+      localStorage.clear()
+      location.reload()
+    }
